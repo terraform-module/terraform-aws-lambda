@@ -13,6 +13,13 @@ Here's the gist of using it via github.
 ## Module Variables
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| arn | Lambda ARN |
+| cloudwatch\_logs\_arn |  |
+| name | Lambda Name |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
