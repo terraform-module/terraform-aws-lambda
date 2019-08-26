@@ -1,31 +1,56 @@
-variable environment {}
-variable function_name {}
-variable filename {}
-variable description {}
-variable runtime {}
-variable handler {}
-variable memory_size {}
-variable concurrency {}
-variable lambda_timeout {}
-variable role_arn {}
-
-variable tags {
-  type = "map"
+variable "function_name" {
+  type = string
+}
+variable "filename" {
+  type = string
+}
+variable "description" {
+  type = string
+}
+variable "runtime" {
+  type = string
+}
+variable "handler" {
+  type = string
+}
+variable "memory_size" {
+  type = number
+}
+variable "concurrency" {
+  type = number
+}
+variable "lambda_timeout" {
+  type = number
+}
+variable "role_arn" {
+  type = string
 }
 
-variable subnet_ids {
-  default = []
-}
-
-variable security_group_ids {
-  default = []
-}
-
-variable environment_vars {
-  type    = "map"
+variable "tags" {
+  type    = map
   default = {}
 }
 
-variable publish {
+variable "subnet_ids" {
+  type    = list(string)
+  default = []
+}
+
+variable "security_group_ids" {
+  type    = list(string)
+  default = []
+}
+
+variable "environment_vars" {
+  type    = map
+  default = {}
+}
+
+variable "publish" {
+  type    = bool
   default = true
+}
+
+variable "log_retention" {
+  default = 1
 }
