@@ -7,12 +7,12 @@ Deploy Lambda into VPC
 Here's the gist of using it via github.
 
 ```terraform
-module trigger_transcoder {
+module lambda {
   source = "github.com/terraform-module/terraform-aws-lambda-vpc?ref=v2.0.0"
 
   function_name      = "lambda-to-deploy"
   filename           = "${path.module}/lambda.zip"
-  description        = "Trigger Transcoder"
+  description        = "description should be here"
   handler            = "index.handler"
   runtime            = "nodejs10.x"
   memory_size        = "128"
@@ -20,8 +20,8 @@ module trigger_transcoder {
   lambda_timeout     = "20"
   log_retention      = "1"
   role_arn           = "some-role-arn"
-  subnet_ids         = ["sb-q534562346", "sf-34534236"]
-  security_group_ids = ["sg-3450398534967"]
+  subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
+  security_group_ids = ["sg-3asdfadsfasdfas"]
 
   environment_vars = {
     Environment = "test"
