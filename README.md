@@ -20,8 +20,11 @@ module lambda {
   lambda_timeout     = "20"
   log_retention      = "1"
   role_arn           = "some-role-arn"
-  subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
-  security_group_ids = ["sg-3asdfadsfasdfas"]
+
+  vpc_config = {
+    subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
+    security_group_ids = ["sg-3asdfadsfasdfas"]
+  }
 
   environment_vars = {
     Environment = "test"
