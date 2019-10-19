@@ -40,9 +40,7 @@ variable "vpc_config" {
 }
 
 variable "environment" {
-  type = object({
-    variables = map(string)
-  })
+  type    = map(string)
   default = null
 }
 

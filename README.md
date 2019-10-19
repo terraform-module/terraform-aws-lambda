@@ -42,7 +42,7 @@ module lambda {
 |------|-------------|:----:|:-----:|:-----:|
 | concurrency |  | number | n/a | yes |
 | description |  | string | n/a | yes |
-| environment |  | object | `"null"` | no |
+| environment |  | map(string) | `"null"` | no |
 | filename |  | string | n/a | yes |
 | function\_name |  | string | n/a | yes |
 | handler |  | string | n/a | yes |

@@ -22,7 +22,7 @@ resource aws_lambda_function this {
   dynamic "environment" {
     for_each = var.environment == null ? [] : [var.environment]
     content {
-      variables = environment.value.variables
+      variables = var.environment
     }
   }
 
