@@ -8,7 +8,7 @@ Here's the gist of using it via github.
 
 ```terraform
 module lambda {
-  source = "github.com/terraform-module/terraform-aws-lambda-vpc?ref=v2.0.0"
+  source = "github.com/terraform-module/terraform-aws-lambda-vpc?ref=v2.4.0"
 
   function_name      = "lambda-to-deploy"
   filename           = "${path.module}/lambda.zip"
