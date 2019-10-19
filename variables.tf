@@ -31,19 +31,19 @@ variable "tags" {
   default = {}
 }
 
-variable "subnet_ids" {
-  type    = list(string)
-  default = []
+variable "vpc_config" {
+  type = object({
+    security_group_ids = list(string)
+    subnet_ids         = list(string)
+  })
+  default = null
 }
 
-variable "security_group_ids" {
-  type    = list(string)
-  default = []
-}
-
-variable "environment_vars" {
-  type    = map
-  default = {}
+variable "environment" {
+  type = object({
+    variables = map(string)
+  })
+  default = null
 }
 
 variable "publish" {

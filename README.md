@@ -36,34 +36,32 @@ module lambda {
 ## Module Variables
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Inputs
 
-| Name               | Description |     Type     | Default  | Required |
-| ------------------ | ----------- | :----------: | :------: | :------: |
-| concurrency        |             |    number    |   n/a    |   yes    |
-| description        |             |    string    |   n/a    |   yes    |
-| environment_vars   |             |     map      |   `{}`   |    no    |
-| filename           |             |    string    |   n/a    |   yes    |
-| function_name      |             |    string    |   n/a    |   yes    |
-| handler            |             |    string    |   n/a    |   yes    |
-| lambda_timeout     |             |    number    |   n/a    |   yes    |
-| log_retention      |             |    string    |  `"1"`   |    no    |
-| memory_size        |             |    number    |   n/a    |   yes    |
-| publish            |             |     bool     | `"true"` |    no    |
-| role_arn           |             |    string    |   n/a    |   yes    |
-| runtime            |             |    string    |   n/a    |   yes    |
-| security_group_ids |             | list(string) |   `[]`   |    no    |
-| subnet_ids         |             | list(string) |   `[]`   |    no    |
-| tags               |             |     map      |   `{}`   |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| concurrency |  | number | n/a | yes |
+| description |  | string | n/a | yes |
+| environment |  | object | `"null"` | no |
+| filename |  | string | n/a | yes |
+| function\_name |  | string | n/a | yes |
+| handler |  | string | n/a | yes |
+| lambda\_timeout |  | number | n/a | yes |
+| log\_retention |  | string | `"1"` | no |
+| memory\_size |  | number | n/a | yes |
+| publish |  | bool | `"true"` | no |
+| role\_arn |  | string | n/a | yes |
+| runtime |  | string | n/a | yes |
+| tags |  | map | `{}` | no |
+| vpc\_config |  | object | `"null"` | no |
 
 ## Outputs
 
-| Name                | Description |
-| ------------------- | ----------- |
-| arn                 | Lambda ARN  |
-| cloudwatch_logs_arn |             |
-| name                | Lambda Name |
+| Name | Description |
+|------|-------------|
+| arn | Lambda ARN |
+| cloudwatch\_logs\_arn |  |
+| name | Lambda Name |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

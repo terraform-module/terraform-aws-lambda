@@ -11,13 +11,19 @@ resource aws_lambda_function this {
   timeout                        = var.lambda_timeout
   tags                           = var.tags
 
-  vpc_config {
-    subnet_ids         = var.subnet_ids
-    security_group_ids = var.security_group_ids
+  dynamic "vpc_config" {
+    for_each = var.vpc_config == null ? [] : [var.vpc_config]
+    content {
+      security_group_ids = vpc_config.value.security_group_ids
+      subnet_ids         = vpc_config.value.subnet_ids
+    }
   }
 
-  environment {
-    variables = var.environment_vars
+  dynamic "environment" {
+    for_each = var.environment == null ? [] : [var.environment]
+    content {
+      variables = environment.value.variables
+    }
   }
 
   lifecycle {
