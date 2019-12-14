@@ -1,6 +1,6 @@
-# AWS Lambda VPC
+# AWS Lambda
 
-Deploy Lambda into VPC
+Deploy Lambda into VPC or outside of the vpc
 
 ## Usage example
 
@@ -8,13 +8,13 @@ Here's the gist of using it via github.
 
 ```terraform
 module lambda {
-  source = "github.com/terraform-module/terraform-aws-lambda-vpc?ref=v2.4.0"
+  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.4.0"
 
   function_name      = "lambda-to-deploy"
   filename           = "${path.module}/lambda.zip"
   description        = "description should be here"
   handler            = "index.handler"
-  runtime            = "nodejs10.x"
+  runtime            = "nodejs12.x"
   memory_size        = "128"
   concurrency        = "5"
   lambda_timeout     = "20"
@@ -71,15 +71,13 @@ module lambda {
 ## Commands
 
 <!-- START makefile-doc -->
-
 ```
-$ make help
+$ make help 
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
 changelog                      Update changelog
-release                        Create release version
+release                        Create release version 
 ```
-
 <!-- END makefile-doc -->
 
 ## How to Contribute

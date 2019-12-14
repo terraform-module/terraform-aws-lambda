@@ -3,9 +3,29 @@
 
 
 
+<a name="v2.5.0"></a>
+## [v2.5.0] - 2019-12-14
+
+- remove deprecation warnings
+- Update README.md
+
+
+<a name="v2.4.0"></a>
+## [v2.4.0] - 2019-10-19
+
+- Update documentation
+
+
+<a name="v2.3.0"></a>
+## [v2.3.0] - 2019-10-19
+
+- environment can be a map
+
+
 <a name="v2.2.0"></a>
 ## [v2.2.0] - 2019-10-19
 
+- promote to new version
 - Set dynamic values
 - added more generic example
 - added licence
@@ -38,7 +58,10 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.2.0...HEAD
+[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.5.0...HEAD
+[v2.5.0]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.4.0...v2.5.0
+[v2.4.0]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.3.0...v2.4.0
+[v2.3.0]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.2.0...v2.3.0
 [v2.2.0]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.0.2...v2.1.0
 [v2.0.2]: https://github.com/terraform-module/terraform-aws-lambda-vpc.git/compare/v2.0.0...v2.0.2
