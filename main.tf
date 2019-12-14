@@ -28,15 +28,15 @@ resource aws_lambda_function this {
 
   lifecycle {
     ignore_changes = [
-      "filename",
-      "publish",
-      "last_modified",
-      "version",
-      "qualified_arn",
+      filename,
+      publish,
+      last_modified,
+      version,
+      qualified_arn,
     ]
   }
 
-  depends_on = ["aws_cloudwatch_log_group.this"]
+  depends_on = [aws_cloudwatch_log_group.this]
 }
 
 # Cloud watch
@@ -44,7 +44,7 @@ resource aws_cloudwatch_log_group this {
   name              = format("/aws/lambda/%s", var.function_name)
   retention_in_days = var.log_retention
 
-  tags = "${merge(var.tags,
-    map("Function", format("%s", var.function_name))
-  )}"
+  tags = merge(var.tags,
+    { Function = format("%s", var.function_name) }
+  )
 }
