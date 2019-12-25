@@ -29,14 +29,24 @@ resource aws_lambda_function this {
   lifecycle {
     ignore_changes = [
       filename,
-      publish,
-      last_modified,
-      version,
-      qualified_arn,
     ]
   }
 
   depends_on = [aws_cloudwatch_log_group.this]
+}
+
+resource aws_lambda_function_event_invoke_config this {
+  function_name                = aws_lambda_function.this.function_name
+  qualifier                    = aws_lambda_function.this.version
+  maximum_event_age_in_seconds = var.event_age_in_seconds
+  maximum_retry_attempts       = var.retry_attempts
+}
+
+resource aws_lambda_function_event_invoke_config latest {
+  function_name                = aws_lambda_function.this.function_name
+  qualifier                    = "$LATEST"
+  maximum_event_age_in_seconds = var.event_age_in_seconds
+  maximum_retry_attempts       = var.retry_attempts
 }
 
 # Cloud watch

@@ -43,20 +43,22 @@ module lambda {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| concurrency |  | number | n/a | yes |
-| description |  | string | n/a | yes |
-| environment |  | map(string) | `"null"` | no |
-| filename |  | string | n/a | yes |
-| function\_name |  | string | n/a | yes |
-| handler |  | string | n/a | yes |
-| lambda\_timeout |  | number | n/a | yes |
-| log\_retention |  | string | `"1"` | no |
-| memory\_size |  | number | n/a | yes |
-| publish |  | bool | `"true"` | no |
-| role\_arn |  | string | n/a | yes |
-| runtime |  | string | n/a | yes |
-| tags |  | map | `{}` | no |
-| vpc\_config |  | object | `"null"` | no |
+| concurrency | The amount of reserved concurrent executions for this lambda function. A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations. | number | n/a | yes |
+| description | Description of what your Lambda Function does. | string | n/a | yes |
+| environment | The Lambda environment's configuration settings. | map(string) | `"null"` | no |
+| event\_age\_in\_seconds | Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600. | number | `"100"` | no |
+| filename | The path to the function's deployment package within the local filesystem. If defined. No S3 support | string | n/a | yes |
+| function\_name | A unique name for your Lambda Function. | string | n/a | yes |
+| handler | The function entrypoint in your code. | string | n/a | yes |
+| lambda\_timeout | The amount of time your Lambda Function has to run in seconds. Defaults to 5 | number | `"5"` | no |
+| log\_retention | Specifies the number of days you want to retain log events in the specified log group. | number | `"1"` | no |
+| memory\_size | Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128. | number | n/a | yes |
+| publish | Whether to publish creation/change as new Lambda Function Version. Defaults to true. | bool | `"true"` | no |
+| retry\_attempts | Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2. | number | `"0"` | no |
+| role\_arn | IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. | string | n/a | yes |
+| runtime | See Runtimes for valid values. | string | n/a | yes |
+| tags | A mapping of tags to assign to the object. | map | `{}` | no |
+| vpc\_config | Provide this to allow your function to access your VPC. Fields documented below. See Lambda in VPC. | object | `"null"` | no |
 
 ## Outputs
 
