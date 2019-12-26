@@ -58,6 +58,7 @@ module lambda {
 | role\_arn | IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. | string | n/a | yes |
 | runtime | See Runtimes for valid values. | string | n/a | yes |
 | tags | A mapping of tags to assign to the object. | map | `{}` | no |
+| tracing\_config | Use AWS X-Ray to collect data about events that your function processes, and to identify the cause of errors in your serverless applications. Can be either PassThrough or Active. | object | `"null"` | no |
 | vpc\_config | Provide this to allow your function to access your VPC. Fields documented below. See Lambda in VPC. | object | `"null"` | no |
 
 ## Outputs

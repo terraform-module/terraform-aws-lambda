@@ -51,6 +51,15 @@ variable "vpc_config" {
   })
 }
 
+variable "tracing_config" {
+  default     = null
+  description = "Use AWS X-Ray to collect data about events that your function processes, and to identify the cause of errors in your serverless applications. Can be either PassThrough or Active."
+  type = object({
+    mode = string
+  })
+}
+
+
 variable "environment" {
   default     = null
   description = "The Lambda environment's configuration settings."

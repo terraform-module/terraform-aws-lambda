@@ -19,6 +19,13 @@ resource aws_lambda_function this {
     }
   }
 
+  dynamic "tracing_config" {
+    for_each = var.tracing_config == null ? [] : [var.tracing_config]
+    content {
+      mode = tracing_config.value.mode
+    }
+  }
+
   dynamic "environment" {
     for_each = var.environment == null ? [] : [var.environment]
     content {
