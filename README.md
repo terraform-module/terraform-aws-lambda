@@ -26,7 +26,7 @@ module lambda {
     security_group_ids = ["sg-3asdfadsfasdfas"]
   }
 
-  environment_vars = {
+  environment = {
     Environment = "test"
   }
 
@@ -60,6 +60,7 @@ module lambda {
 | tags | A mapping of tags to assign to the object. | map | `{}` | no |
 | tracing\_config | Use AWS X-Ray to collect data about events that your function processes, and to identify the cause of errors in your serverless applications. Can be either PassThrough or Active. | object | `"null"` | no |
 | vpc\_config | Provide this to allow your function to access your VPC. Fields documented below. See Lambda in VPC. | object | `"null"` | no |
+| source\_code\_hash | Used to trigger updates when file contents change.  Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. | string | `"null"` | no |
 
 ## Outputs
 

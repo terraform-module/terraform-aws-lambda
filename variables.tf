@@ -90,3 +90,8 @@ variable "retry_attempts" {
   type        = number
 }
 
+variable "source_code_hash" {
+  default     = null
+  description = "Used to trigger updates when file contents change.  Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key."
+  type        = string
+}
