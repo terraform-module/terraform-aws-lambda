@@ -10,6 +10,7 @@ resource aws_lambda_function this {
   reserved_concurrent_executions = var.concurrency
   timeout                        = var.lambda_timeout
   tags                           = var.tags
+  source_code_hash               = var.source_code_hash
 
   dynamic "vpc_config" {
     for_each = var.vpc_config == null ? [] : [var.vpc_config]
