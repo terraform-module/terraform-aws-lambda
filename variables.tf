@@ -59,7 +59,6 @@ variable "tracing_config" {
   })
 }
 
-
 variable "environment" {
   default     = null
   description = "The Lambda environment's configuration settings."
