@@ -3,6 +3,14 @@ name: Validator
 on: [push, pull_request, issues]
 
 jobs:
+  tflint:
+    name: TFLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: TFLint
+        uses: docker://wata727/tflint
+        
   fmt:
     name: Code Format
     runs-on: ubuntu-latest
