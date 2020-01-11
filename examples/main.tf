@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.region
+}
+
 data archive_file lambda {
   type        = "zip"
   source_file = "index.js"
