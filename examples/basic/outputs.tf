@@ -1,4 +1,4 @@
 output "lambda_arn" {
-  description = "Endpoint for EKS control plane."
+  description = "ARN of the given lambda."
   value       = module.lambda.arn
 }
