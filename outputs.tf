@@ -3,7 +3,7 @@ output "arn" {
   description = "Lambda ARN"
 }
 
-output "arn_version" {
+output "version" {
   value       = aws_lambda_function.this.version
   description = "Lambda Version"
 }
