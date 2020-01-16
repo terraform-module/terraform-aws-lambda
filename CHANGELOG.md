@@ -3,11 +3,21 @@
 
 
 
+<a name="v2.9.0"></a>
+## [v2.9.0] - 2020-01-16
+
+- README update with tf_docs.
+- Remove Labeler workflow
+- Adding lambda version parameter to outputs.tf ([#2](https://github.com/terraform-module/terraform-aws-lambda.git/issues/2))
+
+
 <a name="v2.8.0"></a>
 ## [v2.8.0] - 2020-01-11
 
+- updated changelog
 - stable linter provided
-- set badges
+- terraform tf_lint is broken for folders
+- set bunch of badges
 - setup github workflow
 - added outputs to examples
 - added actions and workflows
@@ -83,7 +93,8 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.8.0...HEAD
+[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.9.0...HEAD
+[v2.9.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.8.0...v2.9.0
 [v2.8.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.7.0...v2.8.0
 [v2.7.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.6.0...v2.7.0
 [v2.6.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.5.0...v2.6.0
