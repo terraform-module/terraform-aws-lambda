@@ -3,6 +3,11 @@ output "arn" {
   description = "Lambda ARN"
 }
 
+output "version" {
+  value       = aws_lambda_function.this.version
+  description = "Lambda Version"
+}
+
 output "name" {
   value       = aws_lambda_function.this.function_name
   description = "Lambda Name"
