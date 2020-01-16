@@ -6,7 +6,6 @@ Deploy Lambda into VPC or outside of the vpc
 ![](https://img.shields.io/github/v/tag/terraform-module/terraform-aws-lambda)
 [![](https://img.shields.io/github/workflow/status/terraform-module/terraform-aws-lambda/Validator/master)](https://github.com/terraform-module/terraform-aws-lambda/actions?query=is%3Acompleted)
 ![](https://github.com/terraform-module/terraform-aws-lambda/workflows/Validator/badge.svg)
-![](https://github.com/terraform-module/terraform-aws-lambda/workflows/Labeler/badge.svg)
 ![](https://img.shields.io/issues/github/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/issues/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/issues-closed/terraform-module/terraform-aws-lambda)
@@ -23,7 +22,7 @@ Here's the gist of using it via github.
 
 ```terraform
 module lambda {
-  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.4.0"
+  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.9.0"
 
   function_name      = "lambda-to-deploy"
   filename           = "${path.module}/lambda.zip"
@@ -35,7 +34,7 @@ module lambda {
   lambda_timeout     = "20"
   log_retention      = "1"
   role_arn           = "some-role-arn"
-
+  
   vpc_config = {
     subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
     security_group_ids = ["sg-3asdfadsfasdfas"]
@@ -84,6 +83,7 @@ module lambda {
 | arn | Lambda ARN |
 | cloudwatch\_logs\_arn |  |
 | name | Lambda Name |
+| version | Lambda Version |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -91,11 +91,11 @@ module lambda {
 
 <!-- START makefile-doc -->
 ```
-$ make help 
+$ make help
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
 changelog                      Update changelog
-release                        Create release version 
+release                        Create release version
 ```
 <!-- END makefile-doc -->
 
