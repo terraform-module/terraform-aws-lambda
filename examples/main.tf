@@ -8,15 +8,6 @@ data archive_file lambda {
   output_path = "lambda_function.zip"
 }
 
-resource aws_lambda_function lambda {
-  source           = ".."
-  filename         = "lambda.zip"
-  function_name    = "lambda"
-  role             = aws_iam_role.iam.arn
-  handler          = "index.handler"
-  source_code_hash = data.archive_file.lambda.output_base64sha256
-  runtime          = "nodejs10.x"
-}
 
 resource aws_iam_role iam {
   name = "iam_for_lambda_tf"
@@ -65,3 +56,31 @@ resource aws_iam_policy trigger_transcoder {
 
 EOF
 }
+module lambda {
+  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.9.0"
+
+  function_name  = "lambda-to-deploy"
+  filename       = data.archive_file.lambda.output_path
+  description    = "description should be here"
+  handler        = "index.handler"
+  runtime        = "nodejs12.x"
+  memory_size    = "128"
+  concurrency    = "5"
+  lambda_timeout = "20"
+  log_retention  = "1"
+  role_arn       = aws_iam_role.iam.arn
+
+  vpc_config = {
+    subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
+    security_group_ids = ["sg-3asdfadsfasdfas"]
+  }
+
+  environment = {
+    Environment = "test"
+  }
+
+  tags = {
+    Environment = "test"
+  }
+}
+
