@@ -3,12 +3,21 @@
 
 
 
+<a name="v2.10.0"></a>
+## [v2.10.0] - 2020-03-02
+
+- update readme
+- fixed example
+- readme extra characters
+
+
 <a name="v2.9.0"></a>
 ## [v2.9.0] - 2020-01-16
 
-- README update with tf_docs.
-- Remove Labeler workflow
+- bump version
+- README update with tf_docs. Remove labeler githook
 - Adding lambda version parameter to outputs.tf ([#2](https://github.com/terraform-module/terraform-aws-lambda.git/issues/2))
+- rename token
 
 
 <a name="v2.8.0"></a>
@@ -93,7 +102,8 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.9.0...HEAD
+[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.10.0...HEAD
+[v2.10.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.9.0...v2.10.0
 [v2.9.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.8.0...v2.9.0
 [v2.8.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.7.0...v2.8.0
 [v2.7.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.6.0...v2.7.0
