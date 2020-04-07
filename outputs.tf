@@ -13,6 +13,11 @@ output "name" {
   description = "Lambda Name"
 }
 
+output "invoke_arn" {
+  value       = aws_lambda_function.this.invoke_arn
+  description = "ARN to invoke the lambda method"
+}
+
 output "cloudwatch_logs_arn" {
   value = aws_cloudwatch_log_group.this.name
 }
