@@ -7,6 +7,10 @@ These serve a few purposes:
 3.  Provides a simple way to play with the Kubernetes cluster you create.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -17,7 +21,7 @@ These serve a few purposes:
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | full\_name | n/a | `string` | `"example"` | no |
 | region | n/a | `string` | `"us-west-2"` | no |
 
