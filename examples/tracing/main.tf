@@ -57,7 +57,8 @@ resource aws_iam_policy trigger_transcoder {
 EOF
 }
 module lambda {
-  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.9.0"
+  source  = "terraform-module/lambda/aws"
+  version = "2.11.0"
 
   function_name  = "lambda-to-deploy"
   filename       = data.archive_file.lambda.output_path
@@ -71,13 +72,12 @@ module lambda {
   role_arn       = aws_iam_role.iam.arn
 
   vpc_config = {
-    subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
+    subnet_ids         = ["sb-q53asdfasdfasdf"]
     security_group_ids = ["sg-3asdfadsfasdfas"]
   }
 
-  environment = {
-    Environment = "test"
-  }
+  environment = merge(local.lambda_env_vars,
+  { Environment = "test" })
 
   tags = {
     Environment = "test"

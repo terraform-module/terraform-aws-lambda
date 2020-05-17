@@ -22,10 +22,11 @@ Here's the gist of using it via github.
 
 ```terraform
 module lambda {
-  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.9.0"
+  source  = "terraform-module/lambda/aws"
+  version = "2.10.0"
 
-  function_name      = "lambda-to-deploy"
-  filename           = "${path.module}/lambda.zip"
+  function_name      = "lambda-name-to-deploy"
+  filename            = "${path.module}/lambda.zip"
   description        = "description should be here"
   handler            = "index.handler"
   runtime            = "nodejs12.x"
@@ -34,6 +35,7 @@ module lambda {
   lambda_timeout     = "20"
   log_retention      = "1"
   role_arn           = "some-role-arn"
+  tracing_config      = { mode = "Active" }
 
   vpc_config = {
     subnet_ids         = ["sb-q53asdfasdfasdf", "sf-3asdfasdfasdf6"]
@@ -58,13 +60,13 @@ module lambda {
 | Name | Version |
 |------|---------|
 | terraform | >= 0.12.9 |
-| aws | >= 2.52 |
+| aws | >= 2.5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | >= 2.52 |
+| aws | >= 2.5 |
 
 ## Inputs
 

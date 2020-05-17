@@ -1,7 +1,17 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v2.11.0"></a>
+## [v2.11.0] - 2020-05-17
 
+DOCS:
+- added example with tracing config
+
+ENHANCEMENTS:
+- output `invoke_arn` to invoke the lambda
+
+BREAKING CHANGES:
+- Minimun `aws` provider version is set to 2.5
 
 <a name="v2.10.0"></a>
 ## [v2.10.0] - 2020-03-02
