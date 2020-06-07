@@ -96,7 +96,7 @@ module lambda {
 | Name | Description |
 |------|-------------|
 | arn | Lambda ARN |
-| cloudwatch\_logs\_arn | n/a |
+| cloudwatch\_logs\_arn | cloudwatch logs AWS ARN |
 | invoke\_arn | ARN to invoke the lambda method |
 | name | Lambda Name |
 | version | Lambda Version |
