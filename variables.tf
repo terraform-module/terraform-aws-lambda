@@ -94,3 +94,9 @@ variable "source_code_hash" {
   description = "Used to trigger updates when file contents change.  Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key."
   type        = string
 }
+
+variable "layers" {
+  default     = null
+  description = "List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function"
+  type        = list(string)
+}
