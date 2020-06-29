@@ -8,7 +8,6 @@ data archive_file lambda {
   output_path = "lambda_function.zip"
 }
 
-
 resource aws_iam_role iam {
   name = "iam_for_lambda_tf"
 
@@ -29,7 +28,7 @@ resource aws_iam_role iam {
 EOF
 }
 
-resource aws_iam_policy trigger_transcoder {
+resource aws_iam_policy this {
   name        = format("%s-trigger-transcoder", local.full_name)
   description = "Allow to access base resources and trigger transcoder"
   policy      = <<EOF

@@ -29,7 +29,7 @@ resource aws_iam_role iam {
 EOF
 }
 
-resource aws_iam_policy trigger_transcoder {
+resource aws_iam_policy this {
   name        = format("%s-trigger-transcoder", local.full_name)
   description = "Allow to access base resources and trigger transcoder"
   policy      = <<EOF

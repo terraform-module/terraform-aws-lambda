@@ -80,6 +80,7 @@ module lambda {
 | function\_name | A unique name for your Lambda Function. | `string` | n/a | yes |
 | handler | The function entrypoint in your code. | `string` | n/a | yes |
 | lambda\_timeout | The amount of time your Lambda Function has to run in seconds. Defaults to 5 | `number` | `5` | no |
+| layers | List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function | `list(string)` | `null` | no |
 | log\_retention | Specifies the number of days you want to retain log events in the specified log group. | `number` | `1` | no |
 | memory\_size | Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128. | `number` | n/a | yes |
 | publish | Whether to publish creation/change as new Lambda Function Version. Defaults to true. | `bool` | `true` | no |
