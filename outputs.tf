@@ -19,7 +19,12 @@ output "invoke_arn" {
 }
 
 output "cloudwatch_logs_arn" {
-  description = "cloudwatch logs AWS ARN"
+  description = "The arn of theh log group."
+  value       = aws_cloudwatch_log_group.this.arn
+}
+
+output "cloudwatch_logs_name" {
+  description = "The name of the log group."
   value       = aws_cloudwatch_log_group.this.name
 }
 

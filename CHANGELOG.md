@@ -1,21 +1,52 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+
+
+<a name="v2.12.3"></a>
+## [v2.13.0] - 2020-07-02
+
+- bug: incorrect ouput reference. added arn and name for cloudwatch log group
+
+
+<a name="v2.12.2"></a>
+## [v2.12.2] - 2020-06-29
+
+- remove transcoder name
+- set tflint
+
+
+<a name="v2.12.1"></a>
+## [v2.12.1] - 2020-06-17
+
+- Merge pull request [#8](https://github.com/terraform-module/terraform-aws-lambda.git/issues/8) from hsb0818/master
+- Add support for lambda layers
+
+
+<a name="v2.12.0"></a>
+## [v2.12.0] - 2020-05-17
+
+- tag release. #minor
+
+
 <a name="v2.11.0"></a>
 ## [v2.11.0] - 2020-05-17
 
-DOCS:
-- added example with tracing config
+- set minimum version. #minor
 
-ENHANCEMENTS:
-- output `invoke_arn` to invoke the lambda
 
-BREAKING CHANGES:
-- Minimun `aws` provider version is set to 2.5
+<a name="v2.10.1"></a>
+## [v2.10.1] - 2020-05-17
+
+- automated release
+- automated release
+- Provide the invoke ARN as output - helps for hooking up to the API gateway ([#5](https://github.com/terraform-module/terraform-aws-lambda.git/issues/5))
+
 
 <a name="v2.10.0"></a>
 ## [v2.10.0] - 2020-03-02
 
+- update changelog
 - update readme
 - fixed example
 - readme extra characters
@@ -112,7 +143,13 @@ BREAKING CHANGES:
 - Initial commit
 
 
-[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.10.0...HEAD
+[Unreleased]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.13.0...HEAD
+[v2.13.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.12.2...v2.13.0
+[v2.12.2]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.12.1...v2.12.2
+[v2.12.1]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.12.0...v2.12.1
+[v2.12.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.11.0...v2.12.0
+[v2.11.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.10.1...v2.11.0
+[v2.10.1]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.10.0...v2.10.1
 [v2.10.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.9.0...v2.10.0
 [v2.9.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.8.0...v2.9.0
 [v2.8.0]: https://github.com/terraform-module/terraform-aws-lambda.git/compare/v2.7.0...v2.8.0

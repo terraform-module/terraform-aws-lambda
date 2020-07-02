@@ -97,7 +97,8 @@ module lambda {
 | Name | Description |
 |------|-------------|
 | arn | Lambda ARN |
-| cloudwatch\_logs\_arn | cloudwatch logs AWS ARN |
+| cloudwatch\_logs\_arn | The arn of theh log group. |
+| cloudwatch\_logs\_name | The name of the log group. |
 | invoke\_arn | ARN to invoke the lambda method |
 | name | Lambda Name |
 | version | Lambda Version |
@@ -111,8 +112,7 @@ module lambda {
 $ make help 
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
-changelog                      Update changelog
-release                        Create release version 
+changelog                      Update changelog 
 ```
 <!-- END makefile-doc -->
 
