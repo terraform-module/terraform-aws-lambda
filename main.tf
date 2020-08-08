@@ -49,6 +49,10 @@ resource aws_lambda_function_event_invoke_config this {
   qualifier                    = aws_lambda_function.this.version
   maximum_event_age_in_seconds = var.event_age_in_seconds
   maximum_retry_attempts       = var.retry_attempts
+
+  depends_on = [
+    aws_lambda_function.this
+  ]
 }
 
 resource aws_lambda_function_event_invoke_config latest {
@@ -56,6 +60,10 @@ resource aws_lambda_function_event_invoke_config latest {
   qualifier                    = "$LATEST"
   maximum_event_age_in_seconds = var.event_age_in_seconds
   maximum_retry_attempts       = var.retry_attempts
+
+  depends_on = [
+    aws_lambda_function.this
+  ]
 }
 
 # Cloud watch
