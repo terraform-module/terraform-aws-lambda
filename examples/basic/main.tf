@@ -75,6 +75,11 @@ module lambda {
     security_group_ids = ["sg-3asdfadsfasdfas"]
   }
 
+  file_system_config = {
+    efs_access_point_arn = "arn:aws:elasticfilesystem:ap-southeast-1:xxxxxxxxxx:access-point/fsap-xxxxxxxxxx"
+    local_mount_path = "/mnt/lambda"
+  }
+
   environment = {
     Environment = "test"
   }

@@ -21,6 +21,14 @@ resource aws_lambda_function this {
     }
   }
 
+  dynamic "file_system_config" {
+    for_each = var.file_system_config == null ? [] : [var.file_system_config]
+    content {
+      arn              = file_system_config.value.efs_access_point_arn
+      local_mount_path = file_system_config.value.local_mount_path
+    }
+  }
+
   dynamic "tracing_config" {
     for_each = var.tracing_config == null ? [] : [var.tracing_config]
     content {
