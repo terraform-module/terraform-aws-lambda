@@ -91,6 +91,7 @@ module lambda {
 | tags | A mapping of tags to assign to the object. | `map` | `{}` | no |
 | tracing\_config | Use AWS X-Ray to collect data about events that your function processes, and to identify the cause of errors in your serverless applications. Can be either PassThrough or Active. | <pre>object({<br>    mode = string<br>  })</pre> | `null` | no |
 | vpc\_config | Provide this to allow your function to access your VPC. Fields documented below. See Lambda in VPC. | <pre>object({<br>    security_group_ids = list(string)<br>    subnet_ids         = list(string)<br>  })</pre> | `null` | no |
+| file\_system\_config | Provide this to allow your function to mount your EFS file system. Fields documented below. See Lambda with EFS. | <pre>{<br>  efs_access_point_arn = string<br>  local_mount_path     = string<br>}</pre> | `null` | no |
 
 ## Outputs
 
@@ -109,10 +110,10 @@ module lambda {
 
 <!-- START makefile-doc -->
 ```
-$ make help 
+$ make help
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
-changelog                      Update changelog 
+changelog                      Update changelog
 ```
 <!-- END makefile-doc -->
 

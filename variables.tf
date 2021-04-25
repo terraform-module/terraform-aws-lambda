@@ -51,6 +51,15 @@ variable "vpc_config" {
   })
 }
 
+variable "file_system_config" {
+  default     = null
+  description = "Provide this to allow your function to mount your EFS file system. Fields documented below. See Lambda with EFS."
+  type = object({
+    efs_access_point_arn = string
+    local_mount_path     = string
+  })
+}
+
 variable "tracing_config" {
   default     = null
   description = "Use AWS X-Ray to collect data about events that your function processes, and to identify the cause of errors in your serverless applications. Can be either PassThrough or Active."
