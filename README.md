@@ -84,7 +84,7 @@ module lambda {
 | log\_retention | Specifies the number of days you want to retain log events in the specified log group. | `number` | `1` | no |
 | memory\_size | Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128. | `number` | n/a | yes |
 | publish | Whether to publish creation/change as new Lambda Function Version. Defaults to true. | `bool` | `true` | no |
-| retry\_attempts | Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2. | `number` | `0` | no |
+| retry\_attempts | Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 0. | `number` | `0` | no |
 | role\_arn | IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. | `string` | n/a | yes |
 | runtime | See Runtimes for valid values. | `string` | n/a | yes |
 | source\_code\_hash | Used to trigger updates when file contents change.  Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3\_key. | `string` | `null` | no |
