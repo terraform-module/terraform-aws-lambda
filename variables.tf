@@ -94,7 +94,7 @@ variable "event_age_in_seconds" {
 
 variable "retry_attempts" {
   default     = 0
-  description = "Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2."
+  description = "Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 0."
   type        = number
 }
 
