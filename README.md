@@ -1,11 +1,15 @@
 # AWS Lambda
 
-Deploy Lambda into VPC or outside of the vpc
+Deploy Lambda into VPC or outside of the VPC.
+
+---
+
+![](https://github.com/terraform-module/terraform-aws-lambda/workflows/release/badge.svg)
+![](https://github.com/terraform-module/terraform-aws-lambda/workflows/commit-check/badge.svg)
+![](https://github.com/terraform-module/terraform-aws-lambda/workflows/labeler/badge.svg)
 
 [![](https://img.shields.io/github/license/terraform-module/terraform-aws-lambda)](https://github.com/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/v/tag/terraform-module/terraform-aws-lambda)
-[![](https://img.shields.io/github/workflow/status/terraform-module/terraform-aws-lambda/validator/master)](https://github.com/terraform-module/terraform-aws-lambda/actions?query=is%3Acompleted)
-![](https://github.com/terraform-module/terraform-aws-lambda/workflows/Validator/badge.svg)
 ![](https://img.shields.io/issues/github/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/issues/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/issues-closed/terraform-module/terraform-aws-lambda)
@@ -15,15 +19,19 @@ Deploy Lambda into VPC or outside of the vpc
 ![](https://img.shields.io/github/commit-activity/m/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/contributors/terraform-module/terraform-aws-lambda)
 ![](https://img.shields.io/github/last-commit/terraform-module/terraform-aws-lambda)
+[![Maintenance](https://img.shields.io/badge/Maintenu%3F-oui-green.svg)](https://GitHub.com/terraform-module/terraform-aws-lambda/graphs/commit-activity)
+[![GitHub forks](https://img.shields.io/github/forks/terraform-module/terraform-aws-lambda.svg?style=social&label=Fork)](https://github.com/terraform-module/terraform-aws-lambda)
+
+---
 
 ## Usage example
 
 Here's the gist of using it via github.
 
 ```terraform
-module lambda {
+module "lambda" {
   source  = "terraform-module/lambda/aws"
-  version = "2.10.0"
+  version = "~> 2"
 
   function_name      = "lambda-name-to-deploy"
   filename            = "${path.module}/lambda.zip"
