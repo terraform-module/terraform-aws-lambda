@@ -57,7 +57,7 @@ resource aws_iam_policy this {
 EOF
 }
 module lambda {
-  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.12.7"
+  source = "github.com/terraform-module/terraform-aws-lambda?ref=v2.12.8"
 
   function_name  = "lambda-to-deploy"
   filename       = data.archive_file.lambda.output_path
