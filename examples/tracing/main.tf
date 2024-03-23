@@ -57,7 +57,7 @@ EOF
 }
 module lambda {
   source  = "terraform-module/lambda/aws"
-  version = "2.13.0"
+  version = "2.13.1"
 
   function_name  = "lambda-to-deploy"
   filename       = data.archive_file.lambda.output_path
